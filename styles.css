@@ -245,36 +245,112 @@ ul li::before {
     padding: 1.5rem;
   }
 }
+/* Technologies Section - Modern Style */
 .technologies {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    border-left: 4px solid #3498db;
+  margin: 2rem 0;
+  padding: 0;
+  background: transparent;
+  border-left: none;
+}
+
+.technologies h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+.technologies h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
 }
 
 .tech-category {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 3px solid var(--primary);
+}
+
+.tech-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .tech-category h4 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-    font-size: 1.1em;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
 
 .tech-category h4 i {
-    color: #3498db;
-    margin-right: 10px;
-    width: 25px;
-    text-align: center;
+  color: var(--accent);
+  margin-right: 12px;
+  font-size: 1.1rem;
+  width: 25px;
+  text-align: center;
 }
 
-.technologies h3 i {
-    color: #3498db;
-    margin-right: 10px;
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
+}
+
+.tech-item i {
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-items {
+    gap: 0.6rem;
+  }
+  
+  .tech-item {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-category {
+    padding: 1.2rem;
+  }
+  
+  .tech-items {
+    gap: 0.5rem;
+  }
 }
